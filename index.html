@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeUp 0.7s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="md:flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="bg-gray-900 text-white md:w-56 p-4">
+    <h1 class="text-xl font-bold mb-4 md:mb-8">AdminPro</h1>
+
+    <nav class="flex md:flex-col gap-2 overflow-x-auto">
+      <a href="#" class="bg-indigo-600 px-3 py-2 rounded">Dashboard</a>
+      <a href="#products" class="px-3 py-2 hover:bg-gray-700 rounded">Products</a>
+      <a href="#orders" class="px-3 py-2 hover:bg-gray-700 rounded">Orders</a>
+      <a href="#stats" class="px-3 py-2 hover:bg-gray-700 rounded">Statistics</a>
+    </nav>
+  </aside>
+
+
+  <!-- Main -->
+  <main class="flex-1">
+
+    <!-- Header -->
+    <header class="bg-white p-4 shadow flex flex-col sm:flex-row
+                   justify-between sm:items-center gap-3">
+
+      <div>
+        <h2 class="text-xl font-bold">Dashboard</h2>
+        <p class="text-gray-500 text-sm">Welcome back, Jeevitha</p>
+      </div>
+
+      <input
+        type="text"
+        placeholder="Search..."
+        class="border rounded-lg px-3 py-2 w-full sm:w-60"
+      >
+    </header>
+
+
+    <div class="p-4 md:p-6">
+
+      <!-- Summary Cards -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+
+        <div class="card bg-white p-5 rounded-xl shadow
+                    transition hover:-translate-y-2 hover:shadow-lg">
+          <p class="text-gray-500">Revenue</p>
+          <h2 class="text-2xl font-bold mt-2">₹1,24,500</h2>
+          <span class="text-green-600 text-sm">↑ 12.5%</span>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl shadow
+                    transition hover:-translate-y-2 hover:shadow-lg">
+          <p class="text-gray-500">Orders</p>
+          <h2 class="text-2xl font-bold mt-2">1,248</h2>
+          <span class="text-green-600 text-sm">↑ 8.2%</span>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl shadow
+                    transition hover:-translate-y-2 hover:shadow-lg">
+          <p class="text-gray-500">Customers</p>
+          <h2 class="text-2xl font-bold mt-2">842</h2>
+          <span class="text-green-600 text-sm">↑ 5.7%</span>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl shadow
+                    transition hover:-translate-y-2 hover:shadow-lg">
+          <p class="text-gray-500">Growth</p>
+          <h2 class="text-2xl font-bold mt-2">18.4%</h2>
+          <span class="text-green-600 text-sm">↑ This month</span>
+        </div>
+
+      </section>
+
+
+      <!-- Products -->
+      <section id="products" class="mb-8">
+
+        <h2 class="text-lg font-bold mb-4">Top Products</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <div class="bg-white p-5 rounded-xl shadow
+                      transition hover:scale-105">
+            <div class="text-4xl mb-3">🎧</div>
+            <h3 class="font-bold">Wireless Headphones</h3>
+            <p class="text-gray-500 text-sm">Electronics</p>
+            <p class="text-indigo-600 font-bold mt-2">₹4,299</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl shadow
+                      transition hover:scale-105">
+            <div class="text-4xl mb-3">⌚</div>
+            <h3 class="font-bold">Smart Watch</h3>
+            <p class="text-gray-500 text-sm">Wearables</p>
+            <p class="text-indigo-600 font-bold mt-2">₹6,999</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl shadow
+                      transition hover:scale-105">
+            <div class="text-4xl mb-3">⌨️</div>
+            <h3 class="font-bold">Keyboard</h3>
+            <p class="text-gray-500 text-sm">Accessories</p>
+            <p class="text-indigo-600 font-bold mt-2">₹3,499</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Statistics + Activity -->
+      <section id="stats"
+               class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+
+        <!-- Statistics -->
+        <div class="bg-white p-5 rounded-xl shadow">
+
+          <h2 class="font-bold mb-5">Statistics</h2>
+
+          <div class="mb-4">
+            <div class="flex justify-between text-sm">
+              <span>Revenue</span>
+              <span>85%</span>
+            </div>
+
+            <div class="bg-gray-200 h-2 rounded mt-2">
+              <div class="bg-indigo-600 h-2 rounded w-[85%]"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex justify-between text-sm">
+              <span>Orders</span>
+              <span>70%</span>
+            </div>
+
+            <div class="bg-gray-200 h-2 rounded mt-2">
+              <div class="bg-green-500 h-2 rounded w-[70%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm">
+              <span>Customers</span>
+              <span>60%</span>
+            </div>
+
+            <div class="bg-gray-200 h-2 rounded mt-2">
+              <div class="bg-orange-500 h-2 rounded w-[60%]"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Activity -->
+        <div class="bg-white p-5 rounded-xl shadow">
+
+          <h2 class="font-bold mb-5">Recent Activity</h2>
+
+          <div class="space-y-4 text-sm">
+
+            <div class="border-b pb-3">
+              <h3 class="font-semibold">New Customer</h3>
+              <p class="text-gray-500">Priya joined the store.</p>
+            </div>
+
+            <div class="border-b pb-3">
+              <h3 class="font-semibold">Order Completed</h3>
+              <p class="text-gray-500">Order #1025 completed.</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold">Low Stock</h3>
+              <p class="text-gray-500">Headphones are running low.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Recent Orders -->
+      <section id="orders" class="bg-white p-5 rounded-xl shadow">
+
+        <h2 class="font-bold mb-4">Recent Orders</h2>
+
+        <!-- Mobile scroll -->
+        <div class="overflow-x-auto">
+
+          <table class="w-full min-w-[600px] text-sm">
+
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="p-3 text-left">Order</th>
+                <th class="p-3 text-left">Customer</th>
+                <th class="p-3 text-left">Product</th>
+                <th class="p-3 text-left">Amount</th>
+                <th class="p-3 text-left">Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">#1025</td>
+                <td class="p-3">Arun</td>
+                <td class="p-3">Headphones</td>
+                <td class="p-3">₹4,299</td>
+                <td class="p-3 text-green-600">Completed</td>
+              </tr>
+
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">#1024</td>
+                <td class="p-3">Priya</td>
+                <td class="p-3">Smart Watch</td>
+                <td class="p-3">₹6,999</td>
+                <td class="p-3 text-orange-500">Pending</td>
+              </tr>
+
+              <tr class="hover:bg-gray-50">
+                <td class="p-3">#1023</td>
+                <td class="p-3">Rahul</td>
+                <td class="p-3">Keyboard</td>
+                <td class="p-3">₹3,499</td>
+                <td class="p-3 text-green-600">Completed</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-8 p-4 text-center
+                   text-gray-500 text-sm">
+      © 2026 AdminPro Dashboard
+    </footer>
+
+  </main>
+
+</div>
+
+</body>
+</html>
